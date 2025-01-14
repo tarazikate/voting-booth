@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Voting Booth</title>
+   <meta charset="utf-8">
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="initPage()">
+   <div class="container">
+      <header>
+         <h1 id="heading">Voting Booth</h1>
+         <div id="message"></div>
+      </header>
+      <main>
+         <section class="candidates-section">
+            <h2>Candidates</h2>
+            <div id="candidateList" class="display-area"></div>
+         </section>
+         <section class="voters-section">
+            <div class="voter-group">
+               <h2>Voters Who Haven't Voted</h2>
+               <div id="potentialBallots" class="display-area"></div>
+            </div>
+            <div class="voter-group">
+               <h2>Voters Who Have Voted</h2>
+               <div id="completedBallots" class="display-area"></div>
+            </div>
+         </section>
+         <section id="results-section" style="display: none;">
+            <h2>Results</h2>
+            <div id="resultsList" class="display-area"></div>
+         </section>
+      </main>
+      <footer>
+         <div id="controls" class="button-group">
+            <button id="addBtn">Add a New Voter</button>
+            <button id="showResults">Show Results</button>
+         </div>
+      </footer>
+   </div>
+   <div id="myModal" class="modal">
+      <div class="modal-content">
+         <span class="close">&times;</span>
+         <p>
+            <input type="text" id="userName" placeholder="Enter voter name">
+         </p>
+         <p>
+            <button id="SubmitBtn">Submit</button>
+         </p>
+      </div>
+   </div>
+   <div id="voteModal" class="modal">
+      <div class="modal-content">
+         <span class="close">&times;</span>
+         <h3>Select a Candidate</h3>
+         <div id="candidateOptions"></div>
+      </div>
+   </div>
+   <script src="control.js"></script>
+</body>
+</html>
+
